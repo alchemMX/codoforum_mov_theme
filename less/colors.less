@@ -1,0 +1,720 @@
+//General Colors
+
+/*------------- START MAIN COLORS -------------*/
+
+//Editing this section is more than enough to completely
+//change the theme , but if you want some specific colors
+//for some elements , you can edit the colors after this section
+
+//body
+@textColor: #c2d4f8;
+@mainColor: #1e1d32;
+@darkenMain: #181728;
+@lightMain: #292845;
+@borderP: #7c69e3;
+
+@bodyBgColor: #f5f5f5;
+@bodyBg: #1e1d32; //url('your_img_path.png') repeat;// to add background image instead of color
+//repeat says whether the background image must be repeated (for eg. if your image is small it will be repeated)
+//you can specify no-repeat instead of repeat to prevent the background image from repeating
+
+
+@startGradient: #3dd0d8;
+@endGradient: rgba(146, 82, 234, 0.64);
+
+@highlightBg: #54a3e0;
+@highlightColor: #fff;
+
+@linkColor: #3f8cc3;
+@linkHoverColor: #0097f6;
+@linkHoverBg: #fff;
+
+//different shades of borders
+@borderColor: #ccc;
+@borderLightColor: #efefef;
+@borderDarkColor: #c0c0c0;
+
+@boxshadowColor: #ccc;
+
+@bg: #181728;
+
+@inverseBg: @linkColor;
+@color: #222; //text color
+@inverseColor: #fff; //text color on inverted bg color
+
+//different shades of desc color(greyish default)
+@descLightColor: #7f7f7f;
+@descDarkColor: #717171;
+@descDarkerColor: #585858;
+
+
+//search styles
+@searchHighlight: #ff6;
+
+@descFontFamily: "Roboto", sans-serif; //thin fonts look good
+@titleFontFamily: Helvetica, Arial, sans-serif; //open sans don't look well with bold
+@numericFontFamily: 'Oswald', sans-serif; //Helvetica is not as thick
+
+//badges
+//new topic badge
+@badgeNewBg: #3f8cc3;
+@badgeNewColor: #fff;
+@badgeNewBorderColor: #1471af;
+@badgeNewBoxShadow: 0px 1px 3px #1471af;
+@badgeNewTextShadow: 0 1px 0 #222;
+
+//number of new replies badge
+@badgeNewRepliesBg: #e44c34;
+@badgeNewRepliesColor: #fff;
+@badgeNewRepliesBorderColor: #E23923 #D83722 #C0311E;
+@badgeNewRepliesBorderLeftColor: #D83722;
+
+
+//input
+@inputBg: #fdfdfd;
+@inputColor: @color;
+@inputBorderColor: @borderColor;
+@inputBoxShadowColor: #f1f1f1;
+@inputFocusOutline: #0088cc;
+
+//input on error
+@inputErrorBorderColor: rgb(223, 88, 85);
+@inputErrorBoxShadowColor: #d59392;
+@inputErrorFocusOutline: red;
+
+@inputDisabledBg: #eee; //used in edit profile page
+@inputDisabledColor: grey;
+
+//notification styles
+//error notification
+@notificationErrorBg: #EE3040;
+@notificationErrorColor: rgb(139, 2, 2);
+@notificationError_A_Color: rgb(139, 2, 2);
+
+//warning notification
+@notificationWarningBg: #ffe691;
+@notificationColor: #7d5912;
+@notificationBorderColor: #f6db7b;
+
+//success notification
+@notificationSuccessBg: #99ffb1;
+@notificationSuccessColor: #2d8241;
+@notificationSuccessBorderColor: #7ce294;
+
+
+//topics.less
+//categories list that appears on left in "All topics" page
+@categoryListContainerBorderColor: @borderColor;
+
+@newTopicButtonHoverColor: #1c68a1;
+
+//below styles are for individual category
+@categoryListBg: @bg;
+@categoryListBorderBottomColor: @categoryListContainerBorderColor;
+@categoryListTextShadow: 0 1px 0 #fff;
+@categoryListHoverBg: #f6f6f6;
+@categoryListHoverColor: @color;
+@categoryListHoverBorderLeft: 3px solid #227abd;
+@categoryList_A_Color: #555;
+@categoryList_A_HoverColor: #3794db;
+@categoryListContent: grey;
+
+@categoryListActiveBg: #31719e;
+@categoryListActiveColor: #fff;
+@categoryListActiveTextShadow: none;
+@categoryListActiveHoverBg: #1471af;
+@categoryListActiveHoverColor: #fff;
+@categoryListActiveContentColor: @categoryListActiveColor;
+
+//new topic count that appears in a category
+@categoryListNewTopicsBg: #eee;
+@categoryListNewTopicsColor: @descDarkerColor;
+@categoryListNewTopicsBoxShadow: inset 1px 1px 2px @descLightColor;
+
+@iconColor: #333; //normal icon color
+@iconInverseColor: #fff; //icon color on inverted bg color
+@iconLightColor: grey;
+
+/*------------- END MAIN COLORS -------------*/
+
+//the notification that pop up at the bottom right
+//when something new happens like: "new topic", "new reply" etc
+@inlineNotificationBgColor: @bg;
+@inlineNotificationColor: @color;
+@inlineNotificationBorderColor: @borderColor;
+
+//the notifications that you see when you click the bell icon in the menu
+@bellNotificationBg: @bg;
+@bellNotificationColor: @color;
+@bellNotificationHeaderBg: @startGradient;
+@bellNotificationHeaderColor: @inverseColor;
+
+@bellNotificationBorderColor: @borderColor;
+@bellNotificationBoxShadow: 1px 1px 3px @descDarkerColor;
+
+
+//forum tags while creating topic
+@tagBgColor: @linkColor;
+@tagColor: @linkHoverBg;
+
+//forum tags while viewing topic
+@tagBgColorTopic: #fafafa;
+@tagColorTopic: #000;
+@tagBgHoverColorTopic: #555;
+@tagHoverColorTopic: #fff;
+
+//Global nav bar @see general.less
+
+@globalNavBg: rgba(24, 23, 40, 0.8); //rgba(45,45,45,.85);
+@globalNavBoxShadow: 3.5px 6.1px 30px rgba(0, 0, 0, 0.57);
+
+@globalNavTitle: #5a7fee; //site title color
+
+@globalNavLink: #5a7fee; //link color
+@globalNavLinkHoverBg: #fff; //link backgrround color on hover
+@globalNavLinkHover: #555; //link color on hover
+@globalNavIconColor: @globalNavLink; //The color of icons like bell, search, etc in the menu
+
+@globalNavIconBg: #fff;
+@globalNavIconBar: #000;
+
+
+//back to top button that appears in the top menubar
+@navBackToTopIconColor: @linkHoverBg;
+
+//Breadcrumbs (at the top of every page)
+@breadcrumbBg: @bg;
+@breadcrumbColor: @descDarkColor;
+@breadcrumbBorderColor: #D4D5D8;
+@breadcrumbBorderTopColor: @borderColor;
+@breadcrumbLiColor: @breadcrumbColor;
+@breadcrumb_A_Color: @linkColor;
+@breadcrumbLinkHoverColor: #00b0ec;
+@breadcrumbLinkBgColor: #bbb;
+@breadcrumbLinkColor: #666;
+
+
+//no topics (0 topics)
+@noTopicsBg: @bg;
+@noTopicsBoxShadowColor: @boxshadowColor;
+
+//switches styles -> the on off switch (you can find it in search)
+@switchBg: @borderLightColor;
+@switchBorderColor: @borderColor;
+
+@switchOnColor: @linkHoverColor;
+@switchToggleBg: @bg;
+@switchToggleBorderColor: @borderColor;
+@switchToggleGradientFrom: @switchBg;
+@switchToggleGradientTo: @switchToggleBg;
+
+//widget styles
+@widgetBg: @topicCreateWidgetBg;
+@widgetHeaderBg: #31719e;
+@widgetHeaderColor: @bg;
+@widgetHeaderBorderColor: @linkHoverColor;
+
+@widgetContentBg: @bg;
+
+//label tag
+@labelColor: @descLightColor;
+
+//block styles -> simple container , used in login, registration, etc forms
+@blockBg: @bg;
+@bockBoxShadow: 1px 1px 5px @boxshadowColor;
+
+//pagination styles
+//@paginationBoxShadow: 0 -3px 3px -3px @boxshadowColor,0 3px 3px -3px @boxshadowColor;
+//@paginationBorderBottomColor: @boxshadowColor;
+//@paginationBorderTopColor:@boxshadowColor;
+@pagination_A_Color: @descDarkColor;
+@pagination_A_BorderColor: @borderDarkColor;
+@pagination_A_Bg: #e9e9e9;
+@pagination_A_TextShadow: 0px 1px 0px #fff;
+@pagination_A_GradientFrom: #f8f8f8;
+@pagination_A_GradientTo: #e9e9e9;
+@pagination_A_HoverBg: #fefefe;
+@paginationActiveBg: @linkColor;
+@paginationActiveColor: @bg;
+@paginationActiveHoverBg: @linkColor;
+
+
+//button styles
+@buttonBg: @borderLightColor;
+@buttonBorderColor: @borderColor;
+
+@buttonDefaultBg: #fff;
+@buttonDefaultColor: @color;
+@buttonDefaultBorderColor: @linkColor;
+
+@buttonPrimaryBg: @endGradient;
+@buttonPrimaryColor: @bg;
+@buttonPrimaryBorderColor: #4d15a3;
+@buttonDangerBg: #9a1616;
+@buttonDangerColor: @bg;
+@buttonDangerBorderColor: #9a1616;
+
+
+//topic.less
+@topicPostsContainerBg: transparent;
+
+//topics.less
+
+//new topic button
+@newTopicButtonBg: @linkHoverColor;
+
+@topicsNavbarBg: #31719e;
+@topicsNavbarBorderColor: @linkHoverColor;
+
+
+// variables for categories.less
+@topicCreateWidgetBg: #f6f6f6;
+
+@brdr: @borderColor;
+
+@categoryDescBg: @bg; //desription above subcats in cat page
+@categoryDescColor: @descDarkColor;
+@categoryDescBorder: @borderLightColor;
+@categoryDescTextShadow: 0 1px 0 @bg;
+
+@catTitleBorderBottom: @brdr;
+@catTitleColor: #fff;
+@catTitleBg: #31719e;
+
+@catImgBg: #fff;
+
+@catDescBorderTop: @brdr;
+
+@catOptionsBorderTop: @brdr;
+
+@catInfoBorderTop: @brdr;
+@catInfoBorderBottom: @brdr;
+
+@subCatTxtColor: #555;
+@subCatTxtBorderBottom: @brdr;
+
+@newTopicBoxShadowColor: @brdr;
+@newTopicFoldBorderColor: #1f71af @bodyBgColor;
+
+
+//Article --- appears in topics page category page & post page
+@articleBg: #292845;
+@articleSecondaryDescColor: @descLightColor;
+@articleAuthorColor: #fff;
+@article_A_Color: darken(@textColor, 20%);
+@article_A_HoverColor: darken(@article_A_Color, 10%);
+@articleAvatarBorderColor: @borderLightColor;
+@articleMessageColor: #c2d4f8;
+@articleMessageBg: @bg;
+@articleMessageBorderColor: @borderLightColor;
+@articleSignatureColor: #888;
+@articleFooterBg: #fafafa;
+@articleFooterColor: @descDarkerColor;
+@articleFooterTextShadow: 0 1px 0 #fff;
+@articleFooterBorderTopColor: @borderLightColor;
+@articleNoContentColor: @descDarkColor;
+@articleNoContentSpanColor: @descDarkerColor;
+@articleLastPostColor: @textColor;
+@articleCategoryImgBorderBottomColor: @articleAvatarBorderColor;
+@articleCategoryImgBorderLeftColor: @articleAvatarBorderColor;
+@articleIconColor: #333; //The three dots you see in every topic/post. You can change the icon color with this
+@articleIconNumViewsColor: #00b147; //The eye icon you see in every topic/post which displays no. of views
+@articleIconNumRepliesColor: #0097f6; //The envelope icon you see in every topic/post which displays no. of replies
+
+//the create topic option in category page
+@createTopicCatBg: #f9f9f9;
+
+//the styles for no more topics that appears in All topics page
+@topicsEndBg: @linkHoverColor;
+@topicsEndColor: @bg;
+@topicsTextShadow: 0 1px 0 #000;
+
+//the separator that appears after each post in the posts page
+@postSeparatorBorder: 1px solid @borderColor;
+
+//Article END
+
+
+//Edit profile page
+@editProfileBg: @bg;
+@editProfileAvatarBorderColor: @brdr;
+@editProfileAvatarPreviewBorderColor: @brdr;
+
+//View profile page
+@viewProfileAvatarBorderColor: @brdr;
+@viewProfileAvatarBg: @bg;
+@viewProfileUserNameBg: @linkColor;
+@viewProfileUserNameColor: #fff;
+@viewProfileUserNameBorderColor: @linkHoverColor;
+@viewProfileRoleNameColor: @descLightColor;
+
+@viewProfileUserDetailsColor: @descDarkColor;
+
+
+//Statistics counter styles
+@statCountBorderRightColor: @borderColor;
+@statCountColor: @descDarkColor;
+@statCountTextColor: #fff;
+
+//Statistics that appear in the posts page
+@postStatBg: @bg;
+@postStatColor: @statCountTextColor;
+
+//Content styles
+@postBlockquoteBg: @borderLightColor;
+@postBlockquoteColor: #999;
+@postBlockquoteBorderLeftColor: @postBlockquoteColor;
+
+//-------------------editor
+
+@markItUpBorder: @brdr;
+
+
+//editor--first row of buttons{
+
+@markItUpHeaderUlBg: #fff;
+@markItUpHeaderUlBoxShadow: 1px 1px 2px @borderColor;
+@markItUpHeaderUlLiBg: #fff;
+@markItUpHeaderUlLiBorderBottom: #fff;
+@markItUpHeaderUlLiHoverBorder: @descDarkerColor;
+
+///}
+
+
+//.markitup .heading
+@markItUpHeadingBg: #fff;
+@markItUpHeadingColor: @color;
+@markItUpHeadingHoverBorder: @brdr;
+@markItUpHeading_A_color: @descDarkerColor;
+@markItUpHeaderHeadingUlBorder: @brdr;
+@markItUpHeaderUlDropMenuBg: #fff;
+@markItUpHeaderUlDropMenuBorder: @brdr;
+
+@markItUpHeaderUlSeparatorBg: @brdr;
+@markItUpHeaderUlUlBg: #f5f5f5;
+@markItUpHeaderUlUlBorder: #3c769d;
+@markItUpHeaderUlUlLiBorderBottom: #3c769d;
+@markItUpHeaderUlUlDropMenuBg: #f5f5f5;
+
+@markItUpHeaderUlUl_A_HoverColor: #fff;
+@markItUpHeaderUlUl_A_HoverBg: @linkColor;
+
+@markitupSmileysBorder: @brdr;
+
+@replyResizeHandleBg: @borderLightColor;
+@replyResizeHandleBorderBottom: @borderDarkColor;
+
+@textareaColor: @color;
+@newReplyPreviewBorder: @borderColor;
+@newReplyPreviewBg: @bg;
+
+@editorPreviewPlaceholderColor: @descDarkColor;
+
+@replyMinChars: @descDarkColor;
+
+@statisticsIconNumViewsColor: @articleIconNumViewsColor;
+@statisticsIconNumRepliesColor: @articleIconNumRepliesColor;
+
+@badgeRewardedBorderColor: @color;
+
+
+// Custom
+.g-header {
+	padding: 235px 0 100px 0;
+    background-image: url(https://i.imgur.com/PqILQ1E.png);
+    background-repeat: no-repeat;
+    background-size: auto 120%;
+    box-shadow: 3.5px 6.1px 30px rgba(0, 0, 0, 0.57);
+}
+.social-content {
+    margin: 0 auto;
+}
+.social-content .social-list {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 15px;
+    padding-top: 9px !important;
+
+}
+
+.social-content .social-list a {
+    color: #fff;
+    transition: all 0.3s ease-out;
+}
+
+.flex-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+}
+.title-bl {
+  position: relative;
+  z-index: 1; }
+  .title-bl .title {
+    position: relative;
+    font-family: "Agency FB";
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 0 2px 4.8px rgba(30, 29, 50, 0.3);
+    text-transform: uppercase;
+    /* padding-top: 25px;
+        padding-bottom: 25px; */ }
+  .title-bl .subtitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 0.02;
+    text-shadow: 0 2px 4.8px rgba(30, 29, 50, 0.3);
+    color: #c2d4f8;
+    font-family: "Agency FB";
+    font-size: 88px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* line-height: 100%; */ }
+
+.title-description {
+  position: relative;
+  z-index: 1; }
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+// Main 
+.CODOFORUM {
+.navbar {
+    border-radius: 0;
+    border: 0;
+    min-height: 110px;
+    max-height: 120px;
+    padding: 0;
+}
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+     color: #3dd0d8;
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: @textColor;
+    background-color: #292845;
+    border-color: @borderP @borderP @borderP;
+
+}
+.nav-tabs .nav-item {
+    &:hover {
+    color: @textColor;
+    background-color: #darkMain;
+    border-color: @borderP;
+    }
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+  border-color: @borderP @borderP @borderP;
+}
+.nav > li > a:hover, .CODOFORUM .nav>li>a:focus {
+    color: @textColor;
+}
+.nav>li>a {
+    color: @textColor;
+}
+.navbar-light .navbar-nav .nav-link {
+    display: block;
+    height: 100%;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.3s ease-out;
+    
+    &:hover {
+    color: #3dd0d8;
+  }
+}.codo_menu_user .codo_menu_user_container {
+    background: #fff;
+    border: 1px solid #ccc; 
+    }
+.codo_inline_notifications>i {
+    display: block;
+    height: 100%;
+    /* text-transform: uppercase; */
+    color: #fff;
+    /* font-family: "Roboto", sans-serif; */
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.3s ease-out;
+}
+.codo_inline_notifications_list>.codo_inline_notification_header {
+      box-shadow: 0px 2px 1px @borderP;
+      color: @textColor;
+      background: @darkenMain;
+}
+.codo_inline_notifications_list > .codo_inline_notification_body .codo_inline_notification_el:hover {
+    background: @mainColor;
+}
+.codo_inline_notifications_list {
+    box-shadow: 1px 1px 3px @borderP;
+    border: 1px solid @borderP;
+}
+.codo_inline_notifications_list > .codo_inline_notification_body .codo_notification_is_read_0 {
+    background: @lightMain;
+    color: @textColor;
+    border-bottom: 1px solid @borderP;
+}
+.codo_inline_notifications_list>.codo_inline_notification_footer {
+    background: @mainColor;
+    border-top: 1px solid @borderP;
+    color: #fff;
+}
+.codo_inline_notifications_list > .codo_inline_notification_body .codo_inline_notification_el>.codo_inline_notification_el_body>.codo_inline_notification_el_head {
+    color: #fff;
+}
+.global_search i {
+    display: block;
+    height: 100%;
+    /* text-transform: uppercase; */
+    color: #fff;
+    /* font-family: "Roboto", sans-serif; */
+    font-size: 16px !important;
+    font-weight: 700;
+    transition: all 0.3s ease-out;
+}
+.codo_menu_dropdown {
+    display: block;
+    height: 100%;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.3s ease-out;
+}
+.codo_forum_title {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 25px;
+    color: #fff !important;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.codo_categories .codo_categories_category a {
+    color: #fff;
+      &:hover {
+    color: #3dd0d8;
+  }
+}
+.codo_notification_block>.codo_notification_block_desc { 
+    color: #fff;
+}
+.codo_categories .codo_categories_category .codo_category_title_header {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 700; 
+}
+article {
+    .codo_post_statistics {
+    color: #fff;
+    }
+    .codo_topics_topic_name>a {
+    color: #fff;
+    }
+}
+.container .codo_posts > .codo_widget > .codo_widget-content > article .codo_posts_post_moderation i {
+    color: #fff;
+}
+.codo_posts_post_moderation .codo_manage_button>i {
+    color: #fff;
+}
+.codo_categories .codo_categories_category .codo_category_title {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 700; 
+}
+.codo_categories .codo_sidebar_fixed .codo_sidebar_settings>div>span { 
+    color: #fff;
+}
+.footer {
+    background: #181728;
+    height: 80px;
+    padding: 10px;
+    .row {
+     background: transparent;
+     margin-top: 5px;
+     font-weight: 700;
+    }
+    a { font-weight: 700; }
+    .container { padding-top: 0px;}
+}
+.codo_topics .codo_topics_body>.codo_topics_end {
+        background: #181728;
+    color: #fff;
+}
+.codo_topics_body > article .codo_topics_topic_message {
+    color: @textColor;
+}
+}
+.alert-minimalist {
+  background-color: @inlineNotificationBgColor;
+  border-color: @borderP;
+  box-shadow: 3.5px 6.1px 30px rgba(0, 0, 0, 0.57);
+  border-radius: 3px;
+  color: @textColor;
+  padding: 10px;
+}
+
+.alert-minimalist > [data-notify="icon"] {
+  height: 50px;
+  margin-right: 12px;
+}
+
+.alert-minimalist > [data-notify="title"] {
+  color: @textColor;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.alert-minimalist > [data-notify="message"] {
+  font-size: 80%;
+}
+.codo_topics_loadmore_div { 
+ background-color: @darkenMain;
+ box-shadow: 3px 1px 3px @borderP;
+}
+.codo_topics_loadmore_div .pagination_previous_page div, .codo_topics_loadmore_div .pagination_next_page div {
+    color: @textColor;
+} 
+
+.pagination_pages .codo_topics_curr_page {
+    background: @lightMain;
+    color: @textColor !important; 
+}
+.codo_topics .codo_topics_head .codo_topics_start_button_div .codo_topics_start_button { 
+        background-color: #292845;
+        border-color: #7c69e3;
+        color: @textColor;
+}
+.codo_topics .codo_topics_head .codo_topics_start_button_div .codo_topics_start_button:hover {
+  color: @textColor;
+  background-color: @darkenMain;
+  border-color: @borderP;
+}

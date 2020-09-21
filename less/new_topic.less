@@ -1,0 +1,273 @@
+/*
+@CODOLICENSE
+*/
+
+label {
+
+    color: @labelColor;
+}
+
+#alter_topic_status {
+    label {
+        color: @textColor;
+    }
+}
+
+.container {
+
+    .codo_select_category {
+
+        display: inline-block;
+    }
+
+    #show_frontpage {
+
+        display: none;
+    }
+    .codo_sticky {
+
+        float: right;
+        margin-right: 10px;
+    }
+
+    #breadcrumb {
+
+        padding: 0;
+
+
+
+        a {
+
+            color: @descLightColor;
+
+            &:after {
+                color: @descLightColor;
+            }
+
+
+            &:first-of-type {
+                padding-left: 0px;
+            }
+        }
+    }
+
+    .codo_move_sep {
+
+        border-right: 1px dashed @descLightColor;
+        height: 12px;
+        width: 1px;
+        margin-left: 20px;
+        display: none;
+    }
+
+    .codo_move {
+
+        display: none;
+        #codo_move_text > span {
+
+            font-weight: bold;
+        }
+
+        span {
+
+            color: @descLightColor;
+        }
+    }
+
+    .codo_widget {
+
+        .box-shadow(0 4px 2px -2px @newTopicBoxShadowColor);
+
+
+        &:before {
+            content: "";
+            z-index: 999;
+            position: absolute;
+            top: 0px;
+            right: 0;
+            border-width: 0 16px 16px 0;
+            border-style: solid;
+            border-color: @newTopicFoldBorderColor;
+            background: @bodyBgColor;
+            display: block;
+            box-shadow:0 1px 0 rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+
+            width: 0;
+        }
+
+
+        #codo_new_topic_loader {
+
+            padding-left: 30px;
+            display: none;
+        }
+
+    }
+
+    .codo_tags {
+
+
+
+        .dropdown-menu {
+
+            max-height: 220px;
+            overflow-y: scroll;
+            li {
+                cursor: pointer;
+            }
+        }
+
+    }
+    .bootstrap-tagsinput {
+
+        .codo_input;
+
+        min-height: 42px;
+        height: auto;
+
+        input {
+            border: none;
+            box-shadow: none;
+            outline: none;
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+            width: auto;
+            max-width: inherit;
+
+            &:focus {
+                border: none;
+                box-shadow: none;
+            }
+        }
+
+        .label-info {
+
+            background-color: @tagBgColor;
+            color: @tagColor;
+            padding: 0px 5px;
+        }
+
+
+        .tag {
+            margin-right: 2px;
+            //color: white;
+
+
+            [data-role="remove"] {
+                margin-left:8px;
+                cursor:pointer;
+                &:after{
+                    content: "x";
+                    padding:0px 2px;
+                }
+                &:hover {
+                    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+                    &:active {
+                        box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+.muted {
+
+    font-size: 12px;
+    color: @descLightColor;
+    clear: both;
+}
+
+
+.codo_switch {
+
+    span {
+
+        width: 45px;
+    }
+
+    .codo_switch_toggle {
+
+        width: 48px;
+
+    }
+}
+
+#datetimepicker {
+
+    cursor: pointer;
+    background: #fff;
+}
+
+#content_toggle_topic_auto_close {
+
+    display: none;
+}
+
+
+#add_poll_toggle_yes {
+
+    padding: 20px;
+    //display: none;
+
+    .codo_poll_input {
+
+        position: relative;
+        padding: 10px;
+
+        input {
+
+            height: 32px;
+        }
+
+        .codo_poll_options {
+
+            position: absolute;
+            right: 16px;
+            top: 12px;
+
+            .codo_poll_option {
+
+                display: inline-block;
+                padding: 4px 2px;
+                cursor: pointer;
+                width: 26px;
+                text-align: center;
+
+                &:hover {
+
+                    background: #eee;
+                }
+
+                .glyphicon-plus {
+
+                    color: #1471af;
+                }
+
+                .glyphicon-remove {
+
+                    color: #9a1616;
+                }
+            }
+
+        }
+    }
+
+    .advanced_poll_options {
+
+        margin-top: 15px;
+
+        label {
+
+            display: block;
+        }
+    }
+}
+
+hr {
+
+    width: 100%;
+}

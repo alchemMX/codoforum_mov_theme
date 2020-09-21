@@ -1,0 +1,610 @@
+/*
+@CODOLICENSE
+*/
+
+.markItUp * {
+    margin:0px; padding:0px;
+    outline:none;
+}
+
+.markItUp .preview {
+
+    display: none;
+}
+.markItUp a:link,
+.markItUp a:visited {
+    color:#000;
+    text-decoration:none;
+}
+.markItUp  {
+
+    width: 50%;
+    border:1px solid @brdr;
+    float: left;
+    height: 100%;
+}
+
+.markitUp_width_half {
+    width:50%;
+}
+
+.markitUp_width_full {
+    width:100%;
+}
+
+.markItUpContainer  {
+    font:11px Verdana, Arial, Helvetica, sans-serif;
+    height: 100%;
+    position: relative;
+}
+.markItUpEditor {
+    font-size:15px;
+    font-family: @descFontFamily;
+    padding:10px;
+    border:0;
+    width:100%;
+    clear:both;
+    line-height:18px;
+    overflow:auto;
+}
+.markItUpPreviewFrame	{
+    overflow:auto;
+    background-color:#fff;
+    border:1px solid #3C769D;
+    width:99.9%;
+    height:300px;
+    margin:5px 0;
+}
+.markItUpFooter {
+    width:100%;
+    cursor:n-resize;
+    display: none;
+}
+.markItUpResizeHandle {
+    overflow:hidden;
+    width:22px; height:5px;
+    margin-left:auto;
+    margin-right:auto;
+    background-image:url(../img/handle.png);
+    cursor:n-resize;
+}
+
+.markItUpHeader {
+
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+}
+/***************************************************************************************/
+/* first row of buttons */
+.markItUpHeader ul li	{
+    list-style: none;
+    float: left;
+    position: relative;
+    background: @markItUpHeaderUlLiBg;
+    cursor: pointer;
+    border-bottom: 1px solid @markItUpHeaderUlLiBorderBottom;
+    padding-bottom: 2px;
+    padding-top: 12px;
+    margin-left: 6px;
+}
+
+.markItUpHeader ul li:hover {
+
+    border-color: @markItUpHeaderUlLiHoverBorder;
+}
+
+.markItUpHeader ul {
+
+    height: 40px;
+    background: @markItUpHeaderUlBg;
+    -webkit-box-shadow: @markItUpHeaderUlBoxShadow;
+    -moz-box-shadow: @markItUpHeaderUlBoxShadow;
+    box-shadow: @markItUpHeaderUlBoxShadow;
+    overflow: hidden;
+}
+
+.markItUpHeader ul li ul{
+    display:none;
+}
+
+.markItUpHeader ul li:hover > ul{
+    display:block;
+    cursor: pointer;
+}
+
+.markItUp .heading {
+    border-radius: 2px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.0980392) 1px 1px inset, rgba(0, 0, 0, 0.0980392) 1px 1px;
+    box-shadow: rgba(255, 255, 255, 0.0980392) 1px 1px inset, rgba(0, 0, 0, 0.0980392) 1px 1px;
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.0980392), transparent);
+    background-repeat: repeat-x;
+    background-color: @markItUpHeadingBg;
+    color: @markItUpHeadingColor;
+    border-color: rgba(0, 0, 0, 0.298039);
+    .transition(0.3s linear box-shadow);
+    padding-bottom: 0px;
+    padding-top: 2px;
+    padding-right: 4px;
+    margin-left: 10px;
+    margin-top: 7px;
+    position: absolute;
+    left: 280px;    
+}
+
+
+.markItUpHeader .heading:hover {
+
+    border-color: @markItUpHeadingHoverBorder;
+}
+
+.markItUp .heading:hover {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.1)));
+    background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05) 0, rgba(0, 0, 0, 0.1));
+    background-image: -ms-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+    background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+
+}
+
+.markItUpHeader .heading > a{
+
+    text-indent: 0;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: @markItUpHeading_A_color;
+}
+
+
+.markItUpHeader > ul > li > a {
+
+    background-size: contain;
+}
+
+.markItUp .heading > ul > li > a {
+
+    width: 100%;
+
+}
+
+.markItUp .heading .header1 > a{
+
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 33px;
+    height: 43px;
+}
+
+.markItUp .heading .header2 > a{
+
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 33px;
+    height: 43px;
+
+}
+.markItUp .heading .header3 > a{
+
+    font-size: 1.17em;
+    font-weight: bold;
+    line-height: 33px;
+    height: 43px;
+
+}
+.markItUp .heading .header4 > a{
+
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 20px;
+    height: 30px;
+}
+.markItUp .heading .header5 > a{
+
+    font-size: .83em;
+    font-weight: bold;
+    line-height: 20px;
+    height: 30px;
+}
+.markItUp .heading .header6 > a{
+
+    font-size: .75em;
+    font-weight: bold;
+    line-height: 20px;
+    height: 30px;
+}
+
+
+.markItUpHeader .heading ul{
+
+    background: white;
+    border: 1px solid @markItUpHeaderHeadingUlBorder;
+    top: 23px;
+    left: -1px;
+    padding: 6px 0px;
+    width: 200px;
+    z-index:300;
+
+}
+
+.markItUpHeader .heading ul li {
+
+    text-align: left;
+    line-height: 8px;
+    border-bottom: 0;
+    margin: 0;
+    padding: 0;
+}
+.markItUpHeader ul .markItUpDropMenu {
+    /*background:transparent url(../img/menu.png) no-repeat 115% 50%;*/
+    background: @markItUpHeaderUlDropMenuBg;
+    border: 1px solid @markItUpHeaderUlDropMenuBorder;
+    margin-right:5px;
+}
+.markItUpHeader ul .markItUpDropMenu li {
+    margin-right:0px;
+}
+.markItUpHeader ul .markItUpSeparator {
+    margin: 0 10px;
+    width: 1px;
+    height: 80%;
+    overflow: hidden;
+    background-color: @markItUpHeaderUlSeparatorBg;
+    padding: 0;
+    margin-top: 5px;
+}
+.markItUpHeader ul ul .markItUpSeparator {
+    width:auto; height:1px;
+    margin:0px;
+}
+/* next rows of buttons */
+.markItUpHeader ul ul {
+    display:none;
+    position:absolute;
+    top:18px; left:0px;
+    background:@markItUpHeaderUlUlBg;
+    border:1px solid @markItUpHeaderUlUlBorder;
+    height:inherit;
+}
+.markItUpHeader ul ul li {
+    float:none;
+    border-bottom:1px solid @markItUpHeaderUlUlLiBorderBottom;
+}
+.markItUpHeader ul ul .markItUpDropMenu {
+    background:@markItUpHeaderUlUlDropMenuBg url(../img/submenu.png) no-repeat 100% 50%;
+}
+/* next rows of buttons */
+.markItUpHeader ul ul ul {
+    position:absolute;
+    top:-1px; left:150px;
+}
+.markItUpHeader ul ul ul li {
+    float:none;
+}
+.markItUpHeader ul a {
+    display:block;
+    width:16px; height:16px;
+    text-indent:-10000px;
+    background-repeat:no-repeat;
+    padding:3px;
+    margin:0px;
+}
+.markItUpHeader ul ul a {
+    display:block;
+    padding-left:0px;
+    text-indent:0;
+    width:120px;
+    padding:5px 5px 5px 25px;
+    background-position:2px 50%;
+}
+.markItUpHeader ul ul a:hover  {
+    color:@markItUpHeaderUlUl_A_HoverColor;
+    background-color: @markItUpHeaderUlUl_A_HoverBg;
+}
+/***************************************************************************************/
+.html .markItUpEditor {
+    background-image:url(../img/bg-editor-html.png);
+}
+.markdown .markItUpEditor {
+    background-image:url(../img/bg-editor-markdown.png);
+}
+.textile .markItUpEditor {
+    background-image:url(../img/bg-editor-textile.png);
+}
+.bbcode .markItUpEditor {
+    background-image:url(../img/bg-editor-bbcode.png);
+}
+.wiki .markItUpEditor,
+.dotclear .markItUpEditor {
+    background-image:url(../img/bg-editor-wiki.png);
+}
+
+
+.markItUp .markItUpButton1 a {
+    background-image:url(../img/bold.png);
+}
+.markItUp .markItUpButton2 a {
+    background-image:url(../img/italic.png);
+}
+
+.markItUp .markItUpButton3 a {
+    background-image:url(../img/list-bullet.png);
+}
+.markItUp .markItUpButton4 a {
+    background-image:url(../img/list-numeric.png);
+}
+
+.markItUp .markItUpButton5 a {
+    background-image:url(../img/picture.png);
+}
+.markItUp .markItUpButton6 a {
+    background-image:url(../img/link.png);
+}
+
+.markItUp .markItUpButton7 a	{
+    background-image:url(../img/quotes.png);
+}
+.markItUp .markItUpButton8 a	{
+    background-image:url(../img/code.png);
+}
+
+.markItUp .markItUpButton9 a	{
+    background-image:url(../img/smileyimg.png);
+}
+
+
+.markItUp .preview a {
+    background-image:url(../img/preview.png);
+}
+
+#codo_markitup_smileys {
+
+    position: absolute;
+    top: 32px;
+    left: 2%;
+    border: 1px solid @markitupSmileysBorder;
+    .box-shadow(1px 1px 4px #ccc);
+    display: none;
+}
+
+    .codo_new_reply_action {
+
+        //position: absolute;
+        bottom: 0.5em;
+        width: 100%;
+        overflow: hidden;
+
+        >img {
+
+            margin-left: 20px;
+            display: none;
+        }
+
+        #codo_post_preview_btn {
+
+            background-repeat: no-repeat;
+            width: 40px;
+            background-position: center;
+            background-size: 22px;
+            float: right;
+        }
+
+        .codo_draft_status_saving,.codo_draft_status_saved {
+
+            display: none;
+            float: right;
+            padding: 6px;
+            font-size: 12px;
+            margin-right: 20px;
+            color: @descDarkColor;
+        }
+
+        #codo_post_preview_btn_resp {
+
+            float: right;
+            //margin-right: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            background-position: center;
+            background-size: 22px;
+            display: none;            
+        }
+
+        .codo_post_preview_bg {
+
+            background-image: url('../img/eye.png');
+        }
+
+        .codo_post_preview_bg_hide {
+
+            background-image: url('../img/eye-blocked.png');
+        }
+
+        i {display: none;}
+    }
+
+.codo_new_reply {
+
+    width: 100%;
+    bottom: 0;
+    display: inline-block;
+    z-index: 1030;
+
+    .codo_reply_box {
+
+        min-height: 150px;
+        height: 325px;
+        margin-bottom: 12px;
+        overflow: hidden;
+
+        >div {
+
+            height: 100%;
+            display: inline;
+        }
+    }
+
+
+    .codo_reply_resize_handle {
+
+        height: 12px;
+        background-color: @replyResizeHandleBg;
+        position: absolute;
+        top: 0;
+        width: 103%;
+        left: 0;
+        border-bottom: 1px solid @replyResizeHandleBorderBottom;
+        overflow: hidden;
+        background-image: url('../img/grip-handle.png');
+        background-repeat: no-repeat;
+        background-position: 49% 50%;;
+    }
+
+    textarea {
+
+        color: @textareaColor;
+        resize: none;
+        .box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+        .transition(all ease-in-out 0.5s);
+
+        width: 49%;
+        height: 47%;
+        position: absolute;
+        border-top: 2.67em solid transparent;
+        word-wrap: break-word;
+        font-family: inherit;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    img {
+
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;        
+    }
+
+    pre code {
+
+        font-size: 0.9em;
+    }
+
+    .codo_new_reply_preview {
+        font-family: @descFontFamily;
+        height: 100%;
+        width: 49%;
+        float: right;
+        border: 1px solid @newReplyPreviewBorder;
+        margin-left: 1%;
+        position: relative;
+
+        .codo_editor_preview_placeholder {
+
+            color: @editorPreviewPlaceholderColor;
+            position: absolute;
+            top: 6px;
+            left: 10px;
+
+        }
+
+        #codo_new_reply_preview {
+
+            >*:first-child {
+                margin-top: 0px !important;
+            }
+            padding: 10px;
+            border-top: 30px solid transparent;
+            overflow: auto;
+            word-wrap:break-word;
+            margin-bottom: 5px;
+            background: #fff;
+            height: 100%;
+            .box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+        }
+    }
+
+
+    .codo_reply_min_chars {
+
+        /*position: absolute;
+        bottom: 54px;
+        left: 24px;*/
+        position: relative;
+        bottom: 22px !important;
+        left: 5px !important;        
+        color: @replyMinChars;
+    }
+
+    .codo_non_mentionable {
+
+        font-size: 13px;
+        font-style: italic;
+        display: inline-block;
+        margin-bottom: 12px;
+        color: @descDarkColor;
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+
+
+    .markItUp .heading {
+
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+
+
+
+    .codo_new_reply_preview {
+
+        width: 100% !important;         
+        display: none;
+    }
+
+    #codo_post_preview_btn {
+
+        display: none;
+    }
+
+    #codo_post_preview_btn_resp {
+
+        display: block !important;
+    }    
+
+    .markItUp {
+
+        width: 100% !important;
+    }
+
+    .codo_new_reply_action {
+
+        //i {display: block !important;}
+        //.codo_action_button_txt {display: none;}
+    }
+
+
+    .codo_new_reply {
+
+        position: static !important;
+    }
+
+
+    .codo_new_reply_action {
+
+        position: relative !important;
+    }
+
+    .codo_reply_min_chars {
+
+        position: relative !important;
+        bottom: 80px !important;
+        left: 8px !important;        
+    }
+}
